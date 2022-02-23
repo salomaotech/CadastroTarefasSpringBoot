@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Lista</title>
+</head>
+<body>
+
+<table border="1">
+
+    <tr>
+        <th>ID</th>
+        <th>Tarefa</th>
+        <th>Editar</th>
+    </tr>
+
+    <tr th:each="cadastro : ${resultados}">
+        <td th:text="${cadastro.id}"></td>
+        <td th:text="${cadastro.descricao}"></td>
+        <td><a th:href="@{/form-abre-cadastro/{id}(id=${cadastro.id})}">Editar</a></td>
+    </tr>
+
+</table>
+
+</body>
+</html>

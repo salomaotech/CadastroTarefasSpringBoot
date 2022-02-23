@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+</head>
+<body>
+<form action="/atualizar" method="post" th:object="${cadastro}">
+    <textarea name="descricao" placeholder="Descrição" rows="3" th:field="*{descricao}"></textarea>
+    <br>
+    <input type="text" th:field="*{id}"/>
+    <br>
+    <input type="submit" value="Cadastrar"/>
+</form>
+</body>
+</html>
